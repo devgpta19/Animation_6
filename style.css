@@ -1,15 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,body{
+html,
+body {
     height: 100%;
     width: 100%;
 }
 
-#main{
+#main {
     height: 100%;
     width: 100%;
     background-color: hsl(343, 16%, 65%);
@@ -18,80 +19,84 @@ html,body{
     justify-content: center;
 }
 
-#panel{
+#panel {
     position: relative;
-    background-color:hsl(344, 11%, 55%) ;
+    background-color: hsl(344, 11%, 55%);
     height: 80%;
     width: 80%;
     display: flex;
     overflow: hidden;
 }
 
-#part1{
+#part1 {
     height: 100%;
-    width: 26%;
+    width: 16%;
 }
 
-#part2{
+#part2 {
     height: 100%;
     width: 64%;
     background-image: url(https://images.unsplash.com/photo-1621786030484-4c855eed6974?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);
     background-position: top;
     background-size: cover;
+    opacity: 0;
 
 }
-#part3{
+
+#part3 {
     height: 100%;
-    width: 10%;
+    width: 16%;
 }
 
-#cover{
+#cover {
     height: 100%;
     width: 100%;
     background-color: hsla(0, 0%, 0%, 0.623);
 }
 
-#cover2{
+#cover2 {
     height: 100%;
     width: 100%;
     background-color: hsla(0, 18%, 41%, 0.135);
 }
 
-#text{
+#text {
     position: absolute;
     top: 40%;
-    left: 10%;
-    height: 32vh;
-    width: 30vw;
+    left: 0%;
+    height: 33vh;
+    width: 0%;
     color: whitesmoke;
     font-weight: 800;
     font-family: "Monument";
     font-size: 2vw;
-    line-height: 4vw;
     letter-spacing: 0.5vw;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
 }
 
-#photo{
+#photo {
     top: 22%;
-    right: 5%;
+    right: 15%;
     position: absolute;
     height: 21vw;
     width: 15vw;
+    opacity: 0;
     background-image: url(https://images.unsplash.com/photo-1621786037709-6c700b14ea75?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);
     background-size: cover;
     background-position: center;
 }
 
-#overlay{
+#overlay {
     height: 100%;
     width: 100%;
     background-color: hsla(0, 0%, 0%, 0.450);
 }
 
-#vertical{
+#vertical {
     position: absolute;
-    width: 100%;
     font-family: "Monument";
     letter-spacing: 0.3vw;
     font-size: 1.8vw;
@@ -101,9 +106,10 @@ html,body{
     -webkit-text-stroke-width: 0.1vw;
     -webkit-text-stroke-color: whitesmoke;
     color: transparent;
+    width: 100%;
 }
 
-#circle{
+#circle {
     overflow: hidden;
     position: absolute;
     height: 5vw;
@@ -115,8 +121,9 @@ html,body{
     color: whitesmoke;
 }
 
-#name{
+#name {
     position: absolute;
+    z-index: 11;
     font-family: "Monument";
     font-size: 0.7vw;
     width: 10vw;
@@ -124,4 +131,141 @@ html,body{
     top: 10%;
     left: 21.1%;
     color: rgba(245, 245, 245, 0.897);
+}
+
+#one::after {
+    content: "";
+    width: 100%;
+    height: 7.5vh;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 0;
+    bottom: 100;
+
+    animation-name: animation;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-direction: normal;
+    animation-delay: 3s;
+    animation-direction: alternate;
+}
+
+@keyframes animation {
+    0%{
+        left: 0%;
+        width: 100%;
+        background-color: whitesmoke;
+    }
+
+    100% {
+        left: 82%;
+        width: 18%;
+        background-color: whitesmoke;
+    }
+}
+
+#two::after {
+    content: "";
+    width: 100%;
+    height: 4vw;
+    background-color: whitesmoke;
+    position: absolute;
+    bottom: 10;
+    left: 0;
+
+    animation-name: lines;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-direction: normal;
+    animation-delay: 3s;
+    animation-direction: alternate;
+}
+
+@keyframes lines {
+    0% {
+        left: 0%;
+        width: 100%;
+        background-color: whitesmoke;
+    }
+
+    100% {
+        left: 71%;
+        width: 29%;
+        background-color: whitesmoke;
+    }
+}
+
+#three::after {
+    content: "";
+    width: 100%;
+    height: 4vw;
+    background-color: whitesmoke;
+    position: absolute;
+    bottom: 5;
+    left: 0;
+
+    animation-name: ani;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-direction: normal;
+    animation-delay: 3s;
+    animation-direction: alternate;
+}
+
+@keyframes ani {
+    0% {
+        left: 0;
+        width: 100%;
+        background-color: whitesmoke;
+    }
+
+    100% {
+        left: 40%;
+        width: 60%;
+        background-color: whitesmoke;
+    }
+}
+
+#four::after {
+    content: "";
+    width: 100%;
+    height: 7.5vh;
+    background-color: whitesmoke;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    animation-name: line;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-direction: normal;
+    animation-delay: 3s;
+    animation-direction: alternate;
+}
+
+
+@keyframes line {
+    0% {
+        left: 0;
+        width: 100%;
+        background-color: whitesmoke;
+    }
+
+    100% {
+        left: 100%;
+        width: 0%;
+        background-color: whitesmoke;
+    }
 }
