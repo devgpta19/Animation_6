@@ -59,17 +59,17 @@ html,body{
 
 #text{
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 10%;
-    height: 37vh;
-    width: 25vw;
+    height: 32vh;
+    width: 30vw;
     color: whitesmoke;
     font-weight: 800;
     font-family: "Monument";
     font-size: 2vw;
-    /* background-color: rgb(255, 66, 18); */
     line-height: 4vw;
     letter-spacing: 0.5vw;
+    overflow: hidden;
 }
 
 #photo{
@@ -97,5 +97,31 @@ html,body{
     font-size: 1.8vw;
     rotate: 90deg;
     left: 43.6%;
-    top: 95%;
+    top: 50%;
+    -webkit-text-stroke-width: 0.1vw;
+    -webkit-text-stroke-color: whitesmoke;
+    color: transparent;
+}
+
+#circle{
+    overflow: hidden;
+    position: absolute;
+    height: 5vw;
+    width: 5vw;
+    top: 3%;
+    left: 2%;
+    background-image: url(https://www.chungiyoo.com/img/faces/smile%2001.svg);
+    border-radius: 50%;
+    color: whitesmoke;
+}
+
+#name{
+    position: absolute;
+    font-family: "Monument";
+    font-size: 0.7vw;
+    width: 10vw;
+    height: 1vw;
+    top: 10%;
+    left: 21.1%;
+    color: rgba(245, 245, 245, 0.897);
 }
